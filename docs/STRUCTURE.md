@@ -1,0 +1,1 @@
+# Spacecraft OS skeleton layout.
