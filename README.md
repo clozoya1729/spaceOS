@@ -1,8 +1,11 @@
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L4L51IYAOI)
-
 # spaceOS
 
 ###### Spacecraft Flight Software Operating System
+
+[![Patreon](https://img.shields.io/badge/Support-Patreon-051D34?logo=patreon&logoColor=white)](https://www.patreon.com/lozoya)
+[![Buy Me A Coffee](https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-FFDD00?logo=buymeacoffee&logoColor=white)](https://www.buymeacoffee.com/clozoya172b)
+[![Ko-fi](https://img.shields.io/badge/Tip-Ko%E2%80%91fi-FF5E5B?logo=kofi&logoColor=white)](https://ko-fi.com/lozoya)
+![License](https://img.shields.io/badge/license-AGPL--3.0-blue)
 
 A lightweight flight software operating system in C for spacecraft avionics and payload controllers.  
 This project is focused on building a certifiable, space-grade real-time kernel and supporting flight software services.
@@ -24,7 +27,7 @@ of interfacing with any hardware through well-defined extension points.
 
 ---
 
-## 1. Scope
+## Scope
 
 Development begins with a single avionics domain to enable fast iteration:
 
@@ -54,7 +57,7 @@ Development begins with a single avionics domain to enable fast iteration:
 
 ---
 
-## 2. Architecture
+## Architecture
 
 Implemented entirely in C. Options under evaluation:
 
@@ -69,7 +72,7 @@ Implemented entirely in C. Options under evaluation:
 
 ---
 
-## 3. Kernel Feature Set
+## Kernel Feature Set
 
 - **Scheduling:** Fixed-priority or cyclic; tickless support.
 - **Interrupts:** Low-latency ISRs, deferred execution.
@@ -79,7 +82,7 @@ Implemented entirely in C. Options under evaluation:
 
 ---
 
-## 4. Platform Services
+## Platform Services
 
 ### Communication
 
@@ -110,7 +113,7 @@ Implemented entirely in C. Options under evaluation:
 
 ---
 
-## 5. Safety & Process
+## Safety & Process
 
 - **ECSS / NASA standards:** Flight software process compliance, hazard analysis.
 - **Coding Standard:** MISRA C:2012; strict deterministic execution.
@@ -120,14 +123,14 @@ Implemented entirely in C. Options under evaluation:
 
 ---
 
-## 6. Hardware Targets
+## Hardware Targets
 
 - **Preferred processors/MCUs:** LEON (SPARC V8), ARM Cortex-M/R with ECC, RISC-V space-hardened.
 - **Desired features:** Radiation tolerance, dual-redundant comms, watchdogs, hardware timers, SpaceWire interface.
 
 ---
 
-## 7. Deliverables (Phased)
+## Deliverables (Phased)
 
 - **Phase 0 – Board Bring-up**  
   BSP: clock tree, interrupts, startup.s, linker script, UART/RS-422.
@@ -144,7 +147,7 @@ Implemented entirely in C. Options under evaluation:
 
 ---
 
-## 8. Toolchain & CI
+## Toolchain & CI
 
 - **Compiler:** GCC cross-toolchains (sparc-elf, arm-none-eabi), vendor compilers.
 - **Build System:** Make or CMake; outputs: ELF + map + size + telemetry dictionary.
@@ -153,7 +156,7 @@ Implemented entirely in C. Options under evaluation:
 
 ---
 
-## 9. Design Guidelines
+## Design Guidelines
 
 - Keep ISR work minimal; use event/task handoff.
 - No malloc/free after init; static buffers only.
@@ -163,7 +166,7 @@ Implemented entirely in C. Options under evaluation:
 
 ---
 
-## 10. First Milestone
+## First Milestone
 
 - Kernel bring-up with 3 priority levels.
 - CCSDS TC loopback test: inject packet, route, reply with TM.
@@ -280,8 +283,28 @@ spacecraft-os-c/
 
 ---
 
-## License
+## Support This Work
 
-GNU AFFERO GENERAL PUBLIC LICENSE Version 3
+Open source engineering takes a lot of time and coffee. If you would like to directly support ongoing research, development, and maintenance of these tools, you can do so here:
+
+[![Patreon](https://img.shields.io/badge/Support-Patreon-051D34?logo=patreon&logoColor=white)](https://www.patreon.com/lozoya)
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-FFDD00?logo=buymeacoffee&logoColor=white)](https://www.buymeacoffee.com/clozoya172b)
+
+[![Ko-fi](https://img.shields.io/badge/Tip-Ko%E2%80%91fi-FF5E5B?logo=kofi&logoColor=white)](https://ko-fi.com/lozoya)
+
+Your support helps keep the project healthy and moving forward.
 
 ---
+
+## License
+
+This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). Any modified version made available to users over a network must also be released under the AGPL-3.0. See the LICENSE file for full details.
+
+![License](https://img.shields.io/badge/license-AGPL--3.0-blue)
+
+---
+
+
+
+
